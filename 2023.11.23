@@ -1,0 +1,209 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNaHjRcXyh5iF9uWE7j932r",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/YonggunJung/Programmers/blob/main/2023.11.23\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "id": "3jIWsqxXD6px"
+      },
+      "outputs": [],
+      "source": [
+        "# 문제 설명\n",
+        "# 정수 배열 numbers가 매개변수로 주어집니다.\n",
+        "# numbers의 원소의 평균값을 return하도록 solution 함수를 완성해주세요.\n",
+        "\n",
+        "# 제한사항\n",
+        "# 0 ≤ numbers의 원소 ≤ 1,000\n",
+        "# 1 ≤ numbers의 길이 ≤ 100\n",
+        "# 정답의 소수 부분이 .0 또는 .5인 경우만 입력으로 주어집니다.\n",
+        "\n",
+        "# 입출력 예\n",
+        "# numbers                                               \tresult\n",
+        "# [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\t                          5.5\n",
+        "# [89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99]\t           94.0\n",
+        "\n",
+        "# 입출력 예 설명\n",
+        "# 입출력 예 #1\n",
+        "# numbers의 원소들의 평균 값은 5.5입니다.\n",
+        "\n",
+        "# 입출력 예 #2\n",
+        "# numbers의 원소들의 평균 값은 94.0입니다."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def solution(numbers):\n",
+        "    answer = 0\n",
+        "    for i in range(len(numbers)):\n",
+        "      answer += numbers[i]\n",
+        "\n",
+        "    return answer/len(numbers)"
+      ],
+      "metadata": {
+        "id": "MuJTL-E_EIYY"
+      },
+      "execution_count": 26,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+        "solution(numbers)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "khhm3Ip6ELNe",
+        "outputId": "8694557e-b565-4a53-aa74-b9b16ccb0f87"
+      },
+      "execution_count": 27,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "5.5"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 27
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numbers = [89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99]\n",
+        "solution(numbers)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ikKzz6iIEN-H",
+        "outputId": "e3a1b1b1-26d6-48c7-fc6b-34a897540d77"
+      },
+      "execution_count": 28,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "94.0"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 28
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 다른 사람 풀이\n",
+        "import numpy as np\n",
+        "def solution(numbers):\n",
+        "    return np.mean(numbers)"
+      ],
+      "metadata": {
+        "id": "ZfBqUimBG1se"
+      },
+      "execution_count": 29,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def solution(numbers):\n",
+        "    return sum(numbers) / len(numbers)"
+      ],
+      "metadata": {
+        "id": "toUf6cyNHfYC"
+      },
+      "execution_count": 30,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def solution(numbers):\n",
+        "    answer = sum(numbers) / len(numbers)\n",
+        "    return answer"
+      ],
+      "metadata": {
+        "id": "rLrotcJ5HwmW"
+      },
+      "execution_count": 31,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def solution(numbers):\n",
+        "    sum1 = 0\n",
+        "    for i in numbers:\n",
+        "        sum1 += i\n",
+        "    answer = sum1/len(numbers)\n",
+        "\n",
+        "    return answer"
+      ],
+      "metadata": {
+        "id": "FM_hyKXcHl4X"
+      },
+      "execution_count": 32,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import statistics\n",
+        "def solution(numbers):\n",
+        "    answer = 0\n",
+        "    return statistics.mean(numbers)"
+      ],
+      "metadata": {
+        "id": "rWKi69ClHyDP"
+      },
+      "execution_count": 33,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "YXSbz3tDH1AG"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
