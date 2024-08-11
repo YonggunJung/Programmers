@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Programers
+namespace Programmers
 {
     internal class 문자열_반복해서_출력하기
     {
 
-        static void Main(string[] args)
+        static void Main3(string[] args)
         {
             //문제 설명
             //문자열 str과 정수 n이 주어집니다.
@@ -40,5 +40,20 @@ namespace Programers
             }
             
         }
+        // 다른 사람 풀이 1
+        //StringBuilder() 사용해서 ToString으로 보내기 ㅇㅋㄷㅋ
+        //String[] input;
+
+        //Console.Clear();
+        //input = Console.ReadLine().Split(' ');
+
+        //String s1 = input[0];
+        //int a = Int32.Parse(input[1]);
+
+        //StringBuilder sb = new StringBuilder();    
+        //for(int i = 0; i<a; i++) sb.Append(s1);
+
+        //var str = sb.ToString();
+        //Console.WriteLine(str);
     }
 }
